@@ -1,55 +1,63 @@
-page-comments {
-
-    .all{
-        background-color: #f3e8f3;
-    // margin-top: 2px;
-    // padding-left: 2px;
-    // padding-right: 2px;
-    // padding-bottom: 2px;
-    }
-    
+page-comments {    
     .comments{
 
         // position: fixed;
-        // bottom: 1vh;
-        width: 322px;
+        // bottom: 1vh;bottom: 1vh;
+        width: 170%;
         height:50px;  
         border: 2px solid #7a4579;
         border-radius: 10px;
         padding-left: 8px;
         padding-top: 2px;
-        font-size: 10px;
+        font-size: 13px;
         // margin-left: 8px;
         // margin-bottom: 10px;
     }
-
+p{
+    padding-right: 60px;
+}
     .tool{
         height: 10vh;
     }
+//   .ava{
+//         height:40px;
+//         width: 40px;
+//     }
     .com{
-        min-height:70px;
+        // min-height:0px;
         //  width: 100%;
         // border: 2px solid #db3951;
-        border-radius: 15px;
-        margin-bottom: 8px; 
+        // border-radius: 15px;
+        margin-bottom: 2px; 
 
-    }.item{
-        // bottom: 10px;
-        box-shadow: 2px 2px 4px;
-
+      
     }
+    img{
+        border-radius: 40px;
+    }
+    // .item{
+    //     // bottom: 10px;
+    //     box-shadow: 2px 2px 4px;
+
+    // }
     .send{
     // position: fixed;
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
     margin-right: 5px;
     border-radius: 30px;
-    padding-bottom: 2px;
+    // padding-bottom: 2px;
     // border: 2px solid #db3951;
     float: right;
+    // margin-bottom: 10px;
+    bottom: 5px;
     }
     .date{
     font-weight: 30;
+    font-size: 12px;
+    float: right; 
+    margin-bottom: 1px;
+    color:  #7a4579; 
     }
 
     .downer{
@@ -59,13 +67,17 @@ page-comments {
 
     .text{
         margin-left: 2px;
-        // position: relative;
-        
+     
+        font-size: 16px;
     }
    
-    span { float: right; 
-    font-size: 14px;
-    padding-top:5px;
-    }
-
+    // span { 
+   
+    // // padding-top:5px;
+    // }
+.naam{
+    font-size: 20px;
+    color:  #7a4579; 
+    
+}
  }

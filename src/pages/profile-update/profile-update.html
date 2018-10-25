@@ -7,12 +7,6 @@
 <ion-header>
   <div class="thenav">
   <ion-navbar color="trans">
-    <ion-buttons end>
-    <button end ion-button  style="color: white" clear (click)="dismiss()">Back
-        <span ion-text color="primary" showWhen="ios"></span>
-        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
-    </button>
-   </ion-buttons>
   </ion-navbar>
   <div *ngFor="let i of getProfile"  align="center">
     <ion-avatar>
@@ -31,16 +25,19 @@
 <br>
    <ion-item class="upload">
       
-     <input accept="image/png image/jpeg" type="file" (change)="picInsert($event)">
+     
      <div class="butt1" align="center">
-        <button class="btn" ion-button color="own" round (click)="ImageCapture()">Take Picture</button>
+
       </div>
    </ion-item>
    
 </ion-list>
 
 <div align = "center">
+
+    <button class="btn" ion-button color="nav" (click)="ImageCapture()">Take Picture</button>
 <button color = "nav" ion-button (click)="saveData()">Update</button>
+
 </div>
 </ion-content>
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MoreInfoPage } from '../more-info/more-info';
-import { NavController, AlertController, NavParams, LoadingController} from 'ionic-angular';
+import { NavController, AlertController, NavParams, LoadingController, ModalController} from 'ionic-angular';
 import { User } from '../../Modals/User';
 import { FirebaseConnectionProvider } from '../../providers/firebase-connection/firebase-connection';
 import { LoginPage } from '../login/login';
@@ -22,14 +22,39 @@ export class HomePage {
 
   Users = {} as User;
   plus;
-  constructor(public loadingCtrl: LoadingController,public navCtrl: NavController,public navParams: NavParams ,public alertCtrl:AlertController,private firebaseService: FirebaseConnectionProvider){
+  constructor(public modalCtrl: ModalController,public loadingCtrl: LoadingController,public navCtrl: NavController,public navParams: NavParams ,public alertCtrl:AlertController,private firebaseService: FirebaseConnectionProvider){
+    setTimeout(()=> {    
+      this.firebaseService.getUserSatate().then( data2 =>{
+        if (data2 != 1){
+          let alert = this.alertCtrl.create({
+            title: 'Friendly reminder',
+            message: 'some of the app features wont be available since you are not logged in, so do you want to login now?',
+            buttons: [
+              {
+                text: 'No',
+                role: 'cancel',
+                handler: () => {
 
+                }
+              },
+              {
+                text: 'Yes',
+                handler: () => {
+               this.navCtrl.push(LoginPage)
+                }
+              }
+            ]
+          });
+          alert.present();
+        }})
+    }, 10000);
   }
   ionViewDidLoad() {
+    setTimeout(()=> {
       let loading = this.loadingCtrl.create({
         spinner: 'bubbles',
         content: 'Please Wait.',
-        duration: 1000
+        duration: 17000
       });
   
       loading.present();
@@ -37,6 +62,7 @@ export class HomePage {
     var user = this.navParams.get('user');
     this.firebaseService.getAlldata().then((data:any) => {
       this.fetching = data;
+      console.log(data)
       var length =  this.fetching.length;
       for (var x = length - 5; x < length; x++){
         if (this.fetching[x] != undefined){
@@ -50,6 +76,10 @@ export class HomePage {
       }
       loading.dismiss()
     });
+    }, 3100);
+    
+
+
      }
 
 

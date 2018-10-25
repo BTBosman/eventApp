@@ -47,6 +47,11 @@ page-home {
         border: solid 2px grey;
     
     }
+   
+    .shade1{
+        background-color: #666; 
+        height: 19em;
+    }
     // ion-slide.swiper-slide{
     //     right:10%
     // }
@@ -92,77 +97,139 @@ page-home {
     //     }
       
     //   }
-    .scrollcontainer2{
-        //   background: red;
-          width: 100vw;
-          display: flex;
-          flex-direction: row;
-          overflow-x: scroll;
-          height: 19em;
-          margin-top: .8em;
-          .cardcontainer{
-            margin-top: 2em;
-            height: 14em;  
-            // background: blue;
-            margin-right: 2em;
-            flex: auto 0 0;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 4px 9px 5px rgba(grey, .6);
-          .image{
-              height:10em;
-              width:10em;
-              flex: 3 0 0;
-              img{
-                  width: 13em;
-                  height: 13em;
-              }
-            }
+    p.texts{
+      word-wrap:  break-word;
+    }
+    // .scrollcontainer2{
+    //     //   background: red;
+    //       width: 100vw;
+    //       display: flex;
+    //       flex-direction: row;
+    //       overflow-x: scroll;
+    //       height: 19em;
+    //       margin-top: .8em;
+    //       .cardcontainer{
+    //         margin-top: 2em;
+    //         border-radius: 20px;
+    //         height: 12em;  
+    //         // background: blue;
+    //         margin-right: 2em;
+    //         flex: auto 0 0;
+    //         display: flex;
+    //         flex-direction: column;
+    //         box-shadow: 3px 5px 5px black;
+    //       .image{
+    //           height:11em;
+    //           width:13em;
+    //           flex: 3 0 0;
+    //           img{
+    //               border-radius: 20px;
+    //               width: 15em;
+    //               height: 15em;
+    //           }
+    //         }
 
-          .content{
-              flex: 1 0 0;
-              background: whitesmoke;
-              height: 100%;
-              .heading{
-                  margin: 0;
-              }
-              .text{
-                //   font-size: 1em;
-                color: #7a4579;
+    //       .content{
+    //           flex: 1 0 0;
+    //           background: whitesmoke;
+    //           height: 100%;
+    //           .heading{
+    //               margin: 0;
+    //           }
+    //           .text{
+    //             //   font-size: 1em;
+    //             color: #7a4579;
 
-              }
-          }
-      }
-      .cardcontainer:first-child{
-          margin-left: .5em;
-      }
-      .cardcontainer:last-child{
-          margin-right: 2rem;
-      }
+    //           }
+    //       }
+    //   }
+    //   .cardcontainer:first-child{
+    //       margin-left: .5em;
+    //   }
+    //   .cardcontainer:last-child{
+    //       margin-right: 2rem;
+    //   }
 
   
-    }
+    // }
       .scrollcontainer{
         //   background: red;
           width: 100vw;
           display: flex;
           flex-direction: row;
           overflow-x: scroll;
-          height: 21em;
+          height: 22em;
           margin-top: .3em;
           .cardcontainer{
-                height: 20em;  
+                height: 21em;  
                 // background: blue;
                 margin-right: 2em;
                 flex: auto 0 0;
                 display: flex;
                 flex-direction: column;
-                box-shadow: 4px 9px 5px rgba(grey, .6);
+                border-radius: 45px;
+                box-shadow: 4px 9px 5px rgba(rgb(78, 78, 78), .6);
               .image{
                   flex: 3 0 0;
                   img{
-                      width: 12em;
-                      height: 14em;
+                    border-top-left-radius: 40px;
+                    border-top-right-radius: 40px;
+                      width: 15em;
+                      height: 15em;
+                  }
+                }
+
+
+              .content{
+                  flex: 1 0 0;
+                  background: whitesmoke;
+                  height: 100%;
+                  .heading{
+                      margin: 0;
+                  }
+                  .text{
+                    //   font-size: 1em;
+                    color: #7a4579;
+
+                  }
+              }
+          }
+          .cardcontainer:first-child{
+              margin-left: .5em;
+          }
+          .cardcontainer:last-child{
+              margin-right: 2rem;
+          }
+
+
+      }
+
+      .scrollcontainer2{
+        //   background: red;
+          width: 100vw;
+          display: flex;
+          flex-direction: row;
+          overflow-x: scroll;
+          height: 22em;
+          margin-top: .3em;
+          .cardcontainer{
+                height: 17em;  
+                // background: blue;
+                margin-right: 2em;
+                flex: auto 0 0;
+                display: flex;
+                flex-direction: column;
+                border-radius: 45px;
+                box-shadow: 4px 9px 5px rgba(rgb(78, 78, 78), .6);
+              .image{
+                  flex: 3 0 0;
+                  img{
+                    border-top-left-radius: 40px;
+                    border-top-right-radius: 40px;
+                     border-bottom-left-radius: 40px;
+                    border-bottom-right-radius: 40px;
+                      width: 15em;
+                      height: 17em;
                   }
                 }
 

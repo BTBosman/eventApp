@@ -1,7 +1,7 @@
 page-more-info {
 
     .contents{
-        height: 30rem;
+        height: 26rem;
         .navrow{
             display: flex;
             flex-flow: row nowrap;
@@ -19,10 +19,18 @@ page-more-info {
         }
 
     }
-
+.content{
+    // height: 90vh;
+    // top: 7px;
+    padding-top: 10px;
+    // bottom: 16px;
+    padding-right: 40px;
+}
     .menu{
         height: 4em;
         display: flex;
+        overflow: visible;
+
         flex-flow: row nowrap;
         justify-content: space-between;
         box-shadow: 2px 5px 6px rgba(grey, .6);
@@ -33,16 +41,22 @@ page-more-info {
             height: 7em;
             width: 7em;
             border-radius: 50%;
-            border: 3px solid white;
+            // border: 3px solid white;
+            overflow: hidden;
             position: relative;
             left: 1em;
-            top: 1.5em;
+            top: 1.3em;
+            background-color: white;
             box-shadow: 2px 5px 6px rgba(grey, .6);
+        }
+        .im{
+            background-color: white;
+            z-index: 1;
         }
 
         .i{
             display: block;
-            padding: .68em;
+            padding: .66em;
             color: white;
             &:last-child{
                 margin-right: 1em;
@@ -57,6 +71,7 @@ page-more-info {
         margin-left: 8.5em;
         font-weight: bold;
         font-size: 1em;
+        // margin-bottom: 40px;
         box-shadow: none;
         position: fixed;
         display: block;
@@ -68,7 +83,7 @@ page-more-info {
     }
 
     ion-content{
-        margin-top: 5em;
+        margin-top: 3.1em;
         z-index: -999;
     }
 

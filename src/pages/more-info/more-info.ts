@@ -25,7 +25,7 @@ eventsDetails =  new Array();
 plus;
 url =   '../../assets/imgs/Spring-Fi.jpg';
 color='linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,.8)),';
-gatefee;
+fee
 go;
 buttonActive: boolean =  false;
 color2 = "light"
@@ -47,7 +47,7 @@ actionState;
     this.ionViewDidLoad().then(() =>{
       if (this.saveAction != undefined){
         if (this.saveAction == "navigate" ){
-          this.navigate(this.event[0].location)
+          this.navigate()
         }
         else if (this.saveAction == "share" ){
           this.share();
@@ -72,16 +72,27 @@ return new Promise((accpt,rej) =>{
     this.event.length = 0;
     this.event.push(this.test)
     this.actionState = "there is one";
+    if (this.event[0].fee == 0){
+      this.fee =  "Free"
+    }
+    else{
+      this.fee = "R" + this.event[0].fee
+    }
   }
 else{
   this.event.push(this.navParams.get('events'));
+  if (this.event[0].fee == 0){
+    this.fee =  "Free"
+  }
+  else{
+    this.fee = "R" + this.event[0].fee
+  }
 }
   this.firebaseService.getUserSatate().then( data2 =>{
     if (data2 == 1){
       this.changeLoginStatus(true);
       this.go =    this.event[0].going;
       this.url = this.event[0].img;
-      this.gatefee = parseInt(this.event[0].fee ) + 100;
       this.firebaseService.getColourState(this.event[0].key).then(data =>{
         if (this.state == true){
           this.colorState = "danger";
@@ -97,7 +108,6 @@ else{
     else if(data2 == 0){
       this.go =    this.event[0].going;
       this.url = this.event[0].img;
-      this.gatefee = parseInt(this.event[0].fee ) + 100;
      this.changeLoginStatus(false);
     }
     accpt('done running')
@@ -109,9 +119,9 @@ else{
     this.loginStatus =  status;
   }
 
-  navigate(i){
+  navigate(){
     if (this.loginStatus ==  true){
-      this.launchNavigator.navigate(i);
+      this.launchNavigator.navigate(this.event[0].location);
     }
     else{
       this.saveAction = "navigate"
@@ -160,11 +170,12 @@ else{
     if (this.loginStatus ==  true){
       if (this.colorState == "danger"){
         this.firebaseService.removeFromFav(this.event[0].key).then(data =>{
-          const toast = this.toastCtrl.create({
+          const toast1 = this.toastCtrl.create({
             message: 'The event has been removed from your calendar',
-            duration: 3000
+            duration: 3000,
+            cssClass: "toast1"
           });
-          toast.present();
+          toast1.present();
         }  , Error =>{
           console.log(Error.message)
         })
@@ -174,7 +185,8 @@ else{
         this.firebaseService.Goings(this.event[0].hostname,this.event[0].key)
         const toast = this.toastCtrl.create({
          message: 'The event has been added to your calendar',
-         duration: 3000
+         duration: 3000,
+         cssClass: "toast2"
        });
        toast.present();
         this.colorState = "danger";

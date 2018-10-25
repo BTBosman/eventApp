@@ -27,6 +27,7 @@ page-login {
         color: white;
         position: relative;
         top: 90px;
+        text-shadow: 2px 3px 4px black;
 
     }
 
@@ -93,7 +94,6 @@ p{
     background-image:linear-gradient(#7a4579,rgba(0,0,0,0.5)), url('../../assets/imgs/people.jpg');    background-size: cover;
     height:100%;
     width:100%;
-
     animation: pulse 2s linear forwards;
     display: flex;
     align-items: center;

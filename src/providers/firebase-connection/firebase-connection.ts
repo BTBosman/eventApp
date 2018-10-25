@@ -124,7 +124,7 @@ export class FirebaseConnectionProvider {
     })
   }
 
-  registerBusiness(email,password,userName,companyName,location, img){
+  registerBusiness(email,password,userName,companyName,location, img, cellno){
     return new Promise((accpt,rej) =>{
       this.authenticate.createUserWithEmailAndPassword(email,password).then(() =>{
         var user = firebase.auth().currentUser;
@@ -133,7 +133,8 @@ export class FirebaseConnectionProvider {
           CompanyName: companyName,
           companyOwner : userName,
           location: location,
-          img : img
+          img : img,
+          cellno: cellno
         })
         accpt("success!");
       },Error =>{
@@ -257,6 +258,7 @@ this.database.ref('events/').on('value', (data: any) => {
             going: events[k].going,
             comments: events[k].comments,
             hostimg : events[k].hostImg,
+            cellno: events[k].cellno,
             enddate : moment(events[k].endDate).format('MMM Do, YYYY')
           }
           this.fetch.push(obj)
@@ -335,6 +337,7 @@ getNewEvents(){
    }
 
    storeUsername(username){
+     console.log(username)
    }
    
    storeCurrentUsername(username){
@@ -365,6 +368,7 @@ getNewEvents(){
         var keys = Object.keys(details);
           var k = keys[0];
           let obj ={
+          
             username: details[k].Username,
             img: details[k].img,
             userType: details[k].userType,
@@ -379,6 +383,7 @@ getNewEvents(){
 
 comment(text,key){
   return new Promise((accpt, rej) =>{
+    console.log(this.camera)
     var day = moment().format('MMMM Do YYYY, h:mm:ss a');
     this.database.ref('comments/' +  key).push({
       text:text,
@@ -403,7 +408,7 @@ getComments(key){
           let obj = {
             date :moment( details[key].date,'MMMM Do YYYY, h:mm:ss a').startOf('minutes').fromNow(),
             text :  details[key].text,
-            name : details[key].Username,
+            name : details[key].username,
             img: details[key].img
           }
           this.comments.push(obj)

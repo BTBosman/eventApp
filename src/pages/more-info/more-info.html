@@ -17,12 +17,12 @@
     </div>
   </div>
   <div class="menu">
-    <img src="{{i.hostimg}}" alt="image here">
+    <img class="im" src="{{i.hostimg}}" alt="image here">
     <ion-icon class="i" name="md-chatboxes" (click)="comment()" style="zoom: 1.5"></ion-icon>
     <ion-icon color={{colorState}} class="ii" name="md-heart" (click)="going()" style="zoom: 1.5"></ion-icon>
     <ion-icon class="i" (click)="share(i)" name="md-share" style="zoom: 1.5"></ion-icon>  
   </div>
-  <p class="posted">Posted by: {{i.hostname}}</p>
+  <p class="posted">Posted by: {{i.hostname}} <br>Contact: {{i.cellno}}</p>
 </ion-header>
 
 
@@ -52,22 +52,16 @@
           <ion-icon class="ic" name="logo-usd"></ion-icon>
         </ion-thumbnail>
         <p>Admission</p>
-        <h2>R{{b.fee}}</h2>
+        <h2>{{fee}}</h2>
       </ion-item>
     </ion-list>
-<button ion-button block color="nav"  (click)="navigate(b.location)">
-  <ion-icon class="back" name="md-locate" style="zoom: 1.5"> Location</ion-icon>
-</button>
-    <!-- <h4><p>Photos</p></h4>  -->
-  </ion-card-content>
 
-  <!-- <ion-fab class="fabi" right end fixed>
-      <button class="faba" ion-fab color="nav" ><ion-icon class="if" name="arrow-dropleft"></ion-icon></button>
-      <ion-fab-list side="left" >
-        <button color="dark" ion-fab><ion-icon name="md-locate" (click)="navigate(i.location)"></ion-icon></button>
-        <button color="dark" ion-fab><ion-icon name="md-share" (click)="share(i)"></ion-icon></button>
-        <button color="dark" ion-fab><ion-icon name="md-text" (click)="comment()"></ion-icon></button>
-        <button  color="dark" ion-fab><ion-icon name="md-log-out" (click)="logOut()"></ion-icon></button>
-      </ion-fab-list>
-    </ion-fab> -->
+  </ion-card-content>
 </ion-content>
+<ion-footer>
+    <ion-toolbar>
+          <button ion-button block color="nav"  (click)="navigate()">
+              <ion-icon class="back" name="md-locate" style="zoom: 1">  Take me there</ion-icon>
+            </button>
+    </ion-toolbar>
+  </ion-footer>

@@ -1,26 +1,29 @@
 <ion-header>
 
     <ion-navbar color="nav">
-        <ion-title>Comments</ion-title>
+        <ion-title align="center">Comments</ion-title>
       </ion-navbar>
     </ion-header>
     
-    <ion-content class="all" padding>
+    <ion-content class="all">
     <ion-list class="com" *ngFor="let i of comments">
       <div>
           <ion-item>
-        <ion-avatar item-start>
+        <ion-thumbnail item-start class="ava">
           <img src="{{i.img}}">
-        </ion-avatar>
-        <h1 capitalize>
+        </ion-thumbnail>
+        <h1 capitalize class="naam">
           <b>{{i.name}}</b>
-          <span class="date" align="right">{{i.date}}</span>
+          
         </h1>
-     
-      <div no-lines>
+    <div>
+      
           <div text-wrap class="text" capitalize>
         <p>{{i.text}}</p>
-          </div>
+      </div>
+       <span class="date" align="right">{{i.date}}</span>
+      
+          
       </div>
      </ion-item>
     </div>
@@ -33,10 +36,11 @@
      <ion-toolbar class="tool">
        <ion-grid>
        <ion-row>
-         <ion-col>
-     <ion-textarea textwrap maxlength="50" placeholder="Comment here..." class="comments" [(ngModel)]="newmessage"></ion-textarea>       
+         <ion-col col-6>
+     <ion-textarea textwrap maxlength="80" placeholder="Comment here..." class="comments" [(ngModel)]="newmessage"></ion-textarea>       
          </ion-col>
-         <ion-col>
+
+         <ion-col col-0>
         <button ion-button color="nav" item-end icon-only class="send" (click)="placeComment()">
         <ion-icon name="md-send"></ion-icon>
        </button>     

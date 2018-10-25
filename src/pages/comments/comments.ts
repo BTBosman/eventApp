@@ -21,6 +21,7 @@ newmessage;
  ionViewDidLoad() {
    this.firebaseService.getComments(this.eventArray[0].key).then((data:any) =>{
      this.comments = data;
+     console.log(this.comments)
      var length = this.comments.length;
    })
 }

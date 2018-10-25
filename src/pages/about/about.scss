@@ -1,12 +1,12 @@
 page-about {
-
+*font-size: 2em;
     .img{
         // background-image:linear-gradient(rgba(172, 166, 166, 0.418),rgba(172, 166, 166, 0.418)), url('../../assets/imgs/video.jpg');
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        margin-top:30px;
+        margin-top:5px;
         }
     
 
@@ -14,16 +14,21 @@ page-about {
         color: #7a4579;
         font-size: 2em;
         position: relative;
-        bottom: 30px;
+        bottom: 10px;
+        right: 10px;
     }
 
     .btn{
         position: relative;
      //    right: 6%;
-        top: 20px;
-        height: 1%;
+        top: 5px;
+        // height: 1%;
      }
-
+.logo{
+    top: 1px;
+    // margin-left: 280px;
+    // float: left;
+}
      .card{
         // border-radius: 5%;
         // padding-left: 10%;
@@ -38,15 +43,16 @@ page-about {
          
      }
 
-     .item{
-         background-color: #fffdfb00;
-         color: white;
+    //  .item{
+    //      background-color: #fffdfb00;
+    //      color: white;
          
-     }
+    //  }
 
 
      h2{
          color: #7a4579;
+        
      }
 
 
@@ -62,4 +68,5 @@ page-about {
         color: grey;
         font-size: 2.1em;
     }
+    
 }

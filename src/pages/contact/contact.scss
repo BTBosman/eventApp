@@ -30,7 +30,13 @@ page-contact {
         color:whitesmoke;
       
     }
-  
+    h2{
+        text-align: center;
+        font-weight: 100;
+        color: grey;
+        font-size: 2.1em;
+    }
+
     .pic1{
         height: 130px;
         width: 130px;
@@ -52,17 +58,15 @@ page-contact {
     //      margin-top: 70px;
     // }
       
-    .pic{
-
-    height: 30vh;
-    width: 80%;
-
-    top: 30px;
-    }
-
-      .pics{
-          border: 2px solid blue;
-      } 
+   
+#pic{
+    height: 100px;
+    width: 100px;
+}
+    ion-card.card{
+        border-radius: 30px;
+        box-shadow: 2px 3px 4px ;
+    } 
 .dash{
     background-color: rgba(53, 52, 52, 0.555);
     color: white;
@@ -71,13 +75,13 @@ page-contact {
     // position: relative;
     // bottom: 40px;
 }
-.space{
-    height: 30vh;
-    position: relative;
-    bottom: 4px;
-    font-size: 15px;
-    font-weight: 100;
-}
+// .space{
+//     height: 30vh;
+//     position: relative;
+//     bottom: 4px;
+//     font-size: 15px;
+//     font-weight: 100;
+// }
 .con{
     height: 10px;
     width: 10px;
@@ -97,8 +101,18 @@ page-contact {
 h1{
     color: white;
     font-weight: 100;
+    font-size: 2.3em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     position: relative;
     bottom: 45px;
+    margin-top: 27px;
+}
+.mail{
+    color: white;
+    // font-weight: 100;
+    position: relative;
+    font-size: 1.2em;
+    bottom: 50px; 
 }
 .thenav{
     background-image:linear-gradient(rgba(0, 0, 0, 0.808),#7a4579), url('../../assets/imgs/people.jpg');
@@ -110,12 +124,23 @@ h1{
     margin-top: 10px;
 }
 .image{
-    height: 140px;
-    width: 140px;
+    height: 28vh;
+    width: 50%;
+    margin-top: -10%;
     position: relative;
     bottom: 15px;
     border-radius: 100px;
     border: solid 10px #cec2ce81,
+
+}
+.images{
+    height: 180px;
+    width: 180px;
+    box-shadow: 2px 2px 1px;
+    // position: relative;
+    // bottom: 15px;
+    // border-radius: 100px;
+    // border: solid 10px #cec2ce81,
 
 }
 

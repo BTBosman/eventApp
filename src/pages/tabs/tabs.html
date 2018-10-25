@@ -1,3 +1,59 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-itemtop"></div>
+    <div class="log"  ><img class="logos" src="../../assets/imgs/fireworks (1).png">
+      <h1 class="head">Event's Finder</h1></div>
+    <div class="Aligner-item Aligner-itembottom"></div>
+  </div>
+</div> 
+<style>
+.flb {
+    background-image:linear-gradient(#7a4579,rgba(0,0,0,0.5)), url('../../assets/imgs/people.jpg');    background-size: cover;
+    height:100%;
+    width:100%;
+    animation: pulse 2s linear forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h1{
+    color: white;
+    font-weight: 100;
+    text-align: center;
+    font-size: 2.5em;
+    padding-top: 10%;
+
+
+}
+  .Aligner-item {
+    max-width: 50%;
+  }
+  .Aligner-item--top {
+    align-self: flex-start;
+  }
+  .Aligner-item--bottom {
+    align-self: flex-end;
+  }
+  #custom-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100000;
+    width:100%;
+    background-color: #002a3e;
+  }
+  #custom-overlay img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    animation: animation 4100ms linear infinite both ;
+    animation-delay: 6s;
+  }
+  </style>
+
 <ion-tabs  color="tab" >
   <ion-tab  tabsHideOnSubPages="true" [root]="tab1Root"  tabTitle="Home" tabIcon="home"></ion-tab>
    <ion-tab  tabsHideOnSubPages="true" [root]="tab2Root" tabTitle="Calendar" tabIcon="calendar"></ion-tab> 

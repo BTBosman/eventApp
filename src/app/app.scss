@@ -17,3 +17,9 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
+.toast1{.toast-wrapper { 
+    text-align: center;  background: color($colors,  toast2);
+}}
+.toast2{.toast-wrapper { 
+    text-align: center;  background: color($colors,  toast1);
+}}

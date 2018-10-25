@@ -34,8 +34,8 @@ export class RegisterBusinessPage {
      reader.readAsDataURL(event.target.files[0]);
    }
  }
- reg(name,location){
-   this.fire.registerBusiness(this.Users.email,this.Users.password,this.Users.Username ,name,location,this.url).then(() =>{
+ reg(name,location, cellno){
+   this.fire.registerBusiness(this.Users.email,this.Users.password,this.Users.Username ,name,location,this.url, cellno).then(() =>{
      const alert = this.alertCtrl.create({
        title: 'Congradulations',
        subTitle: 'Business Profile has been successfully created',
